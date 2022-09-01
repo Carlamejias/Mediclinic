@@ -1,0 +1,47 @@
+<!-- Comienza el Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="   " ></ion-back-button>
+    </ion-buttons>
+    <ion-title >
+      <img src="assets/img/logo2.png"/>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background" [fullscreen]="true">
+
+  <ion-card>
+
+    <ion-card-content>
+      <ion-item lines="none">
+
+        <ion-label >Rut: {{data.rut}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <section class="full-width">
+    <ion-button expand="full" (click)="registro()" >Dermatología</ion-button>
+  </section>
+  <section class="full-width">
+    <ion-button expand="full" (click)="registro()">Endocrionología</ion-button>
+  </section>
+  <section class="full-width">
+    <ion-button expand="full" (click)="registro()">Ginecología</ion-button>
+  </section>
+  <section class="full-width">
+    <ion-button expand="full" (click)="registro()">Medicina General</ion-button>
+  </section>
+  <section class="full-width">
+    <ion-button expand="full" (click)="registro()">Oftalmología</ion-button>
+  </section>
+  <section class="full-width">
+    <ion-button expand="full" (click)="registro()">Pediatría</ion-button>
+  </section>
+  <section class="full-width">
+    <ion-button expand="full" (click)="registro()">Traumatología</ion-button>
+  </section>
+
+</ion-content>
+

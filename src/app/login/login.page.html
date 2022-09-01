@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="   " ></ion-back-button>
+    </ion-buttons>
+    <ion-title  >
+      <img src="assets/img/logo2.png"/>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  <ion-card>
+    <ion-card-header >
+      <ion-title size="small">Reserva de hora presencial</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full">
+        <ion-label position="floating">Ingrese RUT</ion-label>
+        <ion-input type="text" [(ngModel)]="user.rut" ></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" (click)="ingresar()" >Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
