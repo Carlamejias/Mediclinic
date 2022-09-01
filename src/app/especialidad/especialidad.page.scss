@@ -1,0 +1,24 @@
+ion-content{
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    --padding-end: 20px;
+    --padding-start: 20px;
+}
+ion-item{
+    --padding-bottom: 10px;
+}
+
+ion-title.title-small {
+    color: black;
+    font-weight: bold;
+
+    font-size: 19px;
+}
+
+img {
+    height: 40px;
+    width: 150px;
+}
+ion-content.background{
+    --background: url(../../assets/img/Fondo1.jpg) 0 0/100% 100% no-repeat;
+}
