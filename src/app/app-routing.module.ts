@@ -20,17 +20,13 @@ const routes: Routes = [
     loadChildren: () => import('./especialidad/especialidad.module').then( m => m.EspecialidadPageModule)
   },
   {
-    path: 'registropac',
-    loadChildren: () => import('./registropac/registropac.module').then( m => m.RegistropacPageModule)
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
     path: 'medico',
     loadChildren: () => import('./medico/medico.module').then( m => m.MedicoPageModule)
   },
-  {
-    path: 'calendario',
-    loadChildren: () => import('./calendario/calendario.module').then( m => m.CalendarioPageModule)
-  }
 ];
 
 @NgModule({
