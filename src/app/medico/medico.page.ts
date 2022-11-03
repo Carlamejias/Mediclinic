@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras} from '@angular/router';
+import { NavController } from '@ionic/angular';
+// Se importa ServicioService para consumir el API para cosumirala en la page medico
+//'../servicio.service' selecciona el direcctorio del servicio
+//"../" Sirve para retorcer de direcctorio 
+import { ServicioService } from '../services/servicio.service';
 
 @Component({
   selector: 'app-medico',
@@ -7,38 +12,35 @@ import { ActivatedRoute, Router, NavigationExtras} from '@angular/router';
   styleUrls: ['./medico.page.scss'],
 })
 export class MedicoPage implements OnInit {
-  user={
-    rut:"",
-    nombre:"",
-    apellido:"",
-    mail:"",
-    telefono:""
+  
+  
 
-  }
-  data: any;
+  usuarios
 
-  med={
-    nombre:""
+
+  data
+
+  //Declarar 'servicioService' dentro de 'constructor'
+  constructor(private router: Router, public servicio:ServicioService) {
+
+    this.servicio.getPosts<any[]>("").subscribe(data => {
+      this.usuarios = data 
+      console.log(this.usuarios);
+    })
+  
   }
-  registerForm: any;
-  constructor(private activeroute: ActivatedRoute, private router: Router) {
-    
-    this.activeroute.queryParams.subscribe(params => { 
-      if (this.router.getCurrentNavigation().extras.state) { 
-        this.data = this.router.getCurrentNavigation().extras.state.user; 
-        console.log(this.data) 
-      }else{this.router.navigate(["/login"])} 
-    });
-  }
+
+  
+  
+
   ngOnInit() {
   }
-  ingresar(){
+  
+  calendario(){
 
     let navigationExtras: NavigationExtras = {
-      state: {
-        med: this.med 
-      }
     };
+
     this.router.navigate(['/calendario'],navigationExtras);
   }
 

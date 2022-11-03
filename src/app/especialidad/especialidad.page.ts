@@ -15,16 +15,16 @@ export class EspecialidadPage implements OnInit {
   
   presencial(){
 
-    this.router.navigate(['/login']);
+    this.router.navigate(['login']);
   }
 
   telemedicina(){
 
-    this.router.navigate(['/login']);
+    this.router.navigate(['login']);
   }
   dental(){
 
-    this.router.navigate(['/login']);
+    this.router.navigate(['login']);
   }
 
 }
